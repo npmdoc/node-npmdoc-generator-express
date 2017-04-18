@@ -1,0 +1,1487 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/petecoop/generator-express"
+
+    >generator-express (v2.15.0)</a>
+</h1>
+<h4>A nodejs express generator for Yeoman</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.generator-express">module generator-express</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.generator-express">
+            function <span class="apidocSignatureSpan"></span>generator-express
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.extend">
+            function <span class="apidocSignatureSpan">generator-express.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.super_">
+            function <span class="apidocSignatureSpan">generator-express.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.toString">
+            function <span class="apidocSignatureSpan">generator-express.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">generator-express.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.generator-express.__super__">module generator-express.__super__</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__._getGlobalStorage">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>_getGlobalStorage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__._getStorage">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>_getStorage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__._writeFiles">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>_writeFiles
+            <span class="apidocSignatureSpan">(done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.argument">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>argument
+            <span class="apidocSignatureSpan">(name, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.argumentsHelp">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>argumentsHelp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.bowerInstall">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>bowerInstall
+            <span class="apidocSignatureSpan">(cmpnt, options, cb, spawnOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.checkRequiredArgs">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>checkRequiredArgs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.composeWith">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>composeWith
+            <span class="apidocSignatureSpan">(modulePath, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.desc">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>desc
+            <span class="apidocSignatureSpan">(description)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.destinationPath">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>destinationPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.destinationRoot">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>destinationRoot
+            <span class="apidocSignatureSpan">(rootPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.determineAppname">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>determineAppname
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.help">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>help
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.installDependencies">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>installDependencies
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.npmInstall">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>npmInstall
+            <span class="apidocSignatureSpan">(pkgs, options, cb, spawnOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.option">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>option
+            <span class="apidocSignatureSpan">(name, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.optionsHelp">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>optionsHelp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.parseOptions">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>parseOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.prompt">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>prompt
+            <span class="apidocSignatureSpan">(questions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.registerTransformStream">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>registerTransformStream
+            <span class="apidocSignatureSpan">(streams)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.rootGeneratorName">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>rootGeneratorName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.rootGeneratorVersion">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>rootGeneratorVersion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.run">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>run
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.runInstall">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>runInstall
+            <span class="apidocSignatureSpan">(installer, paths, options, cb, spawnOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.sourceRoot">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>sourceRoot
+            <span class="apidocSignatureSpan">(rootPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.spawnCommand">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>spawnCommand
+            <span class="apidocSignatureSpan">(command, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.spawnCommandSync">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>spawnCommandSync
+            <span class="apidocSignatureSpan">(command, args, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.templatePath">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>templatePath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.usage">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>usage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.generator-express.__super__.yarnInstall">
+            function <span class="apidocSignatureSpan">generator-express.__super__.</span>yarnInstall
+            <span class="apidocSignatureSpan">(pkgs, options, cb, spawnOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">generator-express.__super__.</span>user</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.generator-express" id="apidoc.module.generator-express">module generator-express</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.generator-express" id="apidoc.element.generator-express.generator-express">
+        function <span class="apidocSignatureSpan"></span>generator-express
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generator-express = function () {
+  Generator.apply(this, arguments);
+
+  // add option to skip install
+  this.option(&#x27;skip-install&#x27;);
+
+  this.slugify = slugify;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.extend" id="apidoc.element.generator-express.extend">
+        function <span class="apidocSignatureSpan">generator-express.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extend(protoProps, staticProps) {
+  var parent = this;
+  var child;
+
+  // The constructor function for the new subclass is either defined by you
+  // (the &#x22;constructor&#x22; property in your `extend` definition), or defaulted
+  // by us to simply call the parent&#x27;s constructor.
+  if (protoProps &#x26;&#x26; hasOwnProp.call(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = function () { return parent.apply(this, arguments); };
+  }
+
+  // Add static properties to the constructor function, if supplied.
+  objectAssign(child, parent, staticProps);
+
+  // Set the prototype chain to inherit from `parent`
+  child.prototype = Object.create(parent.prototype, {
+    constructor: {
+      value: child,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+
+  // Add prototype properties (instance properties) to the subclass,
+  // if supplied.
+  if (protoProps) objectAssign(child.prototype, protoProps);
+
+  // Set a convenience property in case the parent&#x27;s prototype is needed
+  // later.
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.super_" id="apidoc.element.generator-express.super_">
+        function <span class="apidocSignatureSpan">generator-express.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.toString" id="apidoc.element.generator-express.toString">
+        function <span class="apidocSignatureSpan">generator-express.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.generator-express.__super__" id="apidoc.module.generator-express.__super__">module generator-express.__super__</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__._getGlobalStorage" id="apidoc.element.generator-express.__super__._getGlobalStorage">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>_getGlobalStorage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getGlobalStorage = function () {
+  var storePath = path.join(userHome, &#x27;.yo-rc-global.json&#x27;);
+  var storeName = util.format(&#x27;%s:%s&#x27;, this.rootGeneratorName(), this.rootGeneratorVersion());
+  return new Storage(storeName, this.fs, storePath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__._getStorage" id="apidoc.element.generator-express.__super__._getStorage">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>_getStorage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getStorage = function () {
+  var storePath = path.join(this.destinationRoot(), &#x27;.yo-rc.json&#x27;);
+  return new Storage(this.rootGeneratorName(), this.fs, storePath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__._writeFiles" id="apidoc.element.generator-express.__super__._writeFiles">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>_writeFiles
+        <span class="apidocSignatureSpan">(done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_writeFiles = function (done) {
+  var self = this;
+
+  var conflictChecker = through.obj(function (file, enc, cb) {
+    var stream = this;
+
+    // If the file has no state requiring action, move on
+    if (file.state === null) {
+      return cb();
+    }
+
+    // Config file should not be processed by the conflicter. Just pass through
+    var filename = path.basename(file.path);
+
+    if (filename === &#x27;.yo-rc.json&#x27; || filename === &#x27;.yo-rc-global.json&#x27;) {
+      this.push(file);
+      return cb();
+    }
+
+    self.conflicter.checkForCollision(file.path, file.contents, function (err, status) {
+      if (err) {
+        cb(err);
+        return;
+      }
+
+      if (status === &#x27;skip&#x27;) {
+        delete file.state;
+      } else {
+        stream.push(file);
+      }
+
+      cb();
+    });
+    self.conflicter.resolve();
+  });
+
+  var transformStreams = this._transformStreams.concat([conflictChecker]);
+  this.fs.commit(transformStreams, function () {
+    done();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.argument" id="apidoc.element.generator-express.__super__.argument">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>argument
+        <span class="apidocSignatureSpan">(name, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">argument = function (name, config) {
+  config = config || {};
+
+  // Alias default to defaults for backward compatibility.
+  if (&#x27;defaults&#x27; in config) {
+    config.default = config.defaults;
+  }
+  config.description = config.description || config.desc;
+
+  _.defaults(config, {
+    name: name,
+    required: config.default === null || config.default === undefined,
+    type: String
+  });
+
+  this._arguments.push(config);
+
+  this.parseOptions();
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.argumentsHelp" id="apidoc.element.generator-express.__super__.argumentsHelp">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>argumentsHelp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">argumentsHelp = function () {
+  var rows = this._arguments.map(function (config) {
+    return [
+      &#x27;&#x27;,
+      config.name ? config.name : &#x27;&#x27;,
+      config.description ? &#x27;# &#x27; + config.description : &#x27;&#x27;,
+      config.type ? &#x27;Type: &#x27; + config.type.name : &#x27;&#x27;,
+      &#x27;Required: &#x27; + config.required
+    ];
+  });
+
+  return table(rows);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.bowerInstall" id="apidoc.element.generator-express.__super__.bowerInstall">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>bowerInstall
+        <span class="apidocSignatureSpan">(cmpnt, options, cb, spawnOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bowerInstall = function (cmpnt, options, cb, spawnOptions) {
+  return this.runInstall(&#x27;bower&#x27;, cmpnt, options, cb, spawnOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.checkRequiredArgs" id="apidoc.element.generator-express.__super__.checkRequiredArgs">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>checkRequiredArgs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkRequiredArgs = function () {
+  // If the help option was provided, we don&#x27;t want to check for required
+  // arguments, since we&#x27;re only going to print the help message anyway.
+  if (this.options.help) {
+    return;
+  }
+
+  // Bail early if it&#x27;s not possible to have a missing required arg
+  if (this.args.length &#x3e; this._arguments.length) {
+    return;
+  }
+
+  this._arguments.forEach(function (config, position) {
+    // If the help option was not provided, check whether the argument was
+    // required, and whether a value was provided.
+    if (config.required &#x26;&#x26; position &#x3e;= this.args.length) {
+      return this.emit(&#x27;error&#x27;, new Error(&#x27;Did not provide required argument &#x27; + chalk.bold(config.name) + &#x27;!&#x27;));
+    }
+  }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.composeWith" id="apidoc.element.generator-express.__super__.composeWith">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>composeWith
+        <span class="apidocSignatureSpan">(modulePath, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">composeWith = function (modulePath, options) {
+  var generator;
+  options = options || {};
+
+  // Pass down the default options so they&#x27;re correclty mirrored down the chain.
+  options = _.extend({
+    skipInstall: this.options.skipInstall,
+    &#x27;skip-install&#x27;: this.options.skipInstall,
+    skipCache: this.options.skipCache,
+    &#x27;skip-cache&#x27;: this.options.skipCache
+  }, options);
+
+  try {
+    var Generator = require(modulePath); // eslint-disable-line import/no-dynamic-require
+    Generator.resolved = require.resolve(modulePath);
+    Generator.namespace = this.env.namespace(modulePath);
+    generator = this.env.instantiate(Generator, {
+      options: options,
+      arguments: options.arguments
+    });
+  } catch (err) {
+    if (err.code === &#x27;MODULE_NOT_FOUND&#x27;) {
+      generator = this.env.create(modulePath, {
+        options: options,
+        arguments: options.arguments
+      });
+    } else {
+      throw err;
+    }
+  }
+
+  if (this._running) {
+    generator.run();
+  } else {
+    this._composedWith.push(generator);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.desc" id="apidoc.element.generator-express.__super__.desc">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>desc
+        <span class="apidocSignatureSpan">(description)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">desc = function (description) {
+  this.description = description || &#x27;&#x27;;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.destinationPath" id="apidoc.element.generator-express.__super__.destinationPath">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>destinationPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destinationPath = function () {
+  var filepath = path.join.apply(path, arguments);
+
+  if (!pathIsAbsolute(filepath)) {
+    filepath = path.join(this.destinationRoot(), filepath);
+  }
+
+  return filepath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.destinationRoot" id="apidoc.element.generator-express.__super__.destinationRoot">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>destinationRoot
+        <span class="apidocSignatureSpan">(rootPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destinationRoot = function (rootPath) {
+  if (_.isString(rootPath)) {
+    this._destinationRoot = path.resolve(rootPath);
+
+    if (!pathExists.sync(rootPath)) {
+      mkdirp.sync(rootPath);
+    }
+
+    process.chdir(rootPath);
+    this.env.cwd = rootPath;
+
+    // Reset the storage
+    this.config = this._getStorage();
+  }
+
+  return this._destinationRoot || this.env.cwd;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.determineAppname" id="apidoc.element.generator-express.__super__.determineAppname">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>determineAppname
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">determineAppname = function () {
+  var appname = this.fs.readJSON(this.destinationPath(&#x27;bower.json&#x27;), {}).name;
+
+  if (!appname) {
+    appname = this.fs.readJSON(this.destinationPath(&#x27;package.json&#x27;), {}).name;
+  }
+
+  if (!appname) {
+    appname = path.basename(this.destinationRoot());
+  }
+
+  return appname.replace(/[^\w\s]+?/g, &#x27; &#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.help" id="apidoc.element.generator-express.__super__.help">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>help
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">help = function () {
+  var filepath = path.join(this.sourceRoot(), &#x27;../USAGE&#x27;);
+  var exists = pathExists.sync(filepath);
+  var out = [
+    &#x27;Usage:&#x27;,
+    &#x27;  &#x27; + this.usage(),
+    &#x27;&#x27;
+  ];
+
+  // Build options
+  if (Object.keys(this._options).length &#x3e; 0) {
+    out = out.concat([
+      &#x27;Options:&#x27;,
+      this.optionsHelp(),
+      &#x27;&#x27;
+    ]);
+  }
+
+  // Build arguments
+  if (this._arguments.length &#x3e; 0) {
+    out = out.concat([
+      &#x27;Arguments:&#x27;,
+      this.argumentsHelp(),
+      &#x27;&#x27;
+    ]);
+  }
+
+  // Append USAGE file is any
+  if (exists) {
+    out.push(fs.readFileSync(filepath, &#x27;utf8&#x27;));
+  }
+
+  return out.join(&#x27;\n&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.installDependencies" id="apidoc.element.generator-express.__super__.installDependencies">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>installDependencies
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">installDependencies = function (options) {
+  options = options || {};
+  var commands = [];
+  var msg = {
+    commands: [],
+    template: _.template(&#x27;\n\nI\&#x27;m all done. &#x27; +
+    &#x27;&#x3c;%= skipInstall ? &#x22;Just run&#x22; : &#x22;Running&#x22; %&#x3e; &#x3c;%= commands %&#x3e; &#x27; +
+    &#x27;&#x3c;%= skipInstall ? &#x22;&#x22; : &#x22;for you &#x22; %&#x3e;to install the required dependencies.&#x27; +
+    &#x27;&#x3c;% if (!skipInstall) { %&#x3e; If this fails, try running the command yourself.&#x3c;% } %&#x3e;\n\n&#x27;)
+  };
+
+  if (_.isFunction(options)) {
+    options = {
+      callback: options
+    };
+  }
+
+  if (options.npm !== false) {
+    msg.commands.push(&#x27;npm install&#x27;);
+    commands.push(function (cb) {
+      this.npmInstall(null, null, cb);
+    }.bind(this));
+  }
+
+  if (options.yarn === true) {
+    msg.commands.push(&#x27;yarn install&#x27;);
+    commands.push(function (cb) {
+      this.yarnInstall(null, null, cb);
+    }.bind(this));
+  }
+
+  if (options.bower !== false) {
+    msg.commands.push(&#x27;bower install&#x27;);
+    commands.push(function (cb) {
+      this.bowerInstall(null, null, cb);
+    }.bind(this));
+  }
+
+  assert(msg.commands.length, &#x27;installDependencies needs at least one of `npm`, `bower` or `yarn` to run.&#x27;);
+
+  if (!options.skipMessage) {
+    var tplValues = _.extend({
+      skipInstall: false
+    }, this.options, {
+      commands: chalk.yellow.bold(msg.commands.join(&#x27; &#x26;&#x26; &#x27;))
+    });
+    this.log(msg.template(tplValues));
+  }
+
+  async.parallel(commands, options.callback || _.noop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.npmInstall" id="apidoc.element.generator-express.__super__.npmInstall">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>npmInstall
+        <span class="apidocSignatureSpan">(pkgs, options, cb, spawnOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">npmInstall = function (pkgs, options, cb, spawnOptions) {
+  return this.runInstall(&#x27;npm&#x27;, pkgs, options, cb, spawnOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.option" id="apidoc.element.generator-express.__super__.option">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>option
+        <span class="apidocSignatureSpan">(name, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">option = function (name, config) {
+  config = config || {};
+
+  // Alias default to defaults for backward compatibility.
+  if (&#x27;defaults&#x27; in config) {
+    config.default = config.defaults;
+  }
+  config.description = config.description || config.desc;
+
+  _.defaults(config, {
+    name: name,
+    description: &#x27;Description for &#x27; + name,
+    type: Boolean,
+    hide: false
+  });
+
+  // Check whether boolean option is invalid (starts with no-)
+  var boolOptionRegex = /^no-/;
+  if (config.type === Boolean &#x26;&#x26; name.match(boolOptionRegex)) {
+    let simpleName = name.replace(boolOptionRegex, &#x27;&#x27;);
+    return this.emit(&#x27;error&#x27;, new Error([
+      `Option name ${chalk.yellow(name)} cannot start with ${chalk.red(&#x27;no-&#x27;)}\n`,
+      `Option name prefixed by ${chalk.yellow(&#x27;--no&#x27;)} are parsed as implicit`,
+      ` boolean. To use ${chalk.yellow(&#x27;--&#x27; + name)} as an option, use\n`,
+      chalk.cyan(`  this.option(&#x27;${simpleName}&#x27;, {type: Boolean})`)
+    ].join(&#x27;&#x27;)));
+  }
+
+  if (this._options[name] === null || this._options[name] === undefined) {
+    this._options[name] = config;
+  }
+
+  this.parseOptions();
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.optionsHelp" id="apidoc.element.generator-express.__super__.optionsHelp">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>optionsHelp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optionsHelp = function () {
+  var options = _.reject(this._options, function (el) {
+    return el.hide;
+  });
+
+  var rows = options.map(function (opt) {
+    return [
+      &#x27;&#x27;,
+      opt.alias ? &#x27;-&#x27; + opt.alias + &#x27;, &#x27; : &#x27;&#x27;,
+      &#x27;--&#x27; + opt.name,
+      opt.description ? &#x27;# &#x27; + opt.description : &#x27;&#x27;,
+      (opt.default !== undefined &#x26;&#x26; opt.default !== null &#x26;&#x26; opt.default !== &#x27;&#x27;) ? &#x27;Default: &#x27; + opt.default : &#x27;&#x27;
+    ];
+  });
+
+  return table(rows);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.parseOptions" id="apidoc.element.generator-express.__super__.parseOptions">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>parseOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseOptions = function () {
+  var minimistDef = {
+    string: [],
+    boolean: [],
+    alias: {},
+    default: {}
+  };
+
+  _.each(this._options, function (option) {
+    if (option.type === Boolean) {
+      minimistDef.boolean.push(option.name);
+      if (!(&#x27;default&#x27; in option) &#x26;&#x26; !option.required) {
+        minimistDef.default[option.name] = EMPTY;
+      }
+    } else {
+      minimistDef.string.push(option.name);
+    }
+
+    if (option.alias) {
+      minimistDef.alias[option.alias] = option.name;
+    }
+
+    // Only apply default values if we don&#x27;t already have a value injected from
+    // the runner
+    if (option.name in this._initOptions) {
+      minimistDef.default[option.name] = this._initOptions[option.name];
+    } else if (option.alias &#x26;&#x26; option.alias in this._initOptions) {
+      minimistDef.default[option.name] = this._initOptions[option.alias];
+    } else if (&#x27;default&#x27; in option) {
+      minimistDef.default[option.name] = option.default;
+    }
+  }.bind(this));
+
+  var parsedOpts = minimist(this._args, minimistDef);
+
+  // Parse options to the desired type
+  _.each(parsedOpts, function (option, name) {
+    // Manually set value as undefined if it should be.
+    if (option === EMPTY) {
+      parsedOpts[name] = undefined;
+      return;
+    }
+    if (this._options[name] &#x26;&#x26; option !== undefined) {
+      parsedOpts[name] = this._options[name].type(option);
+    }
+  }.bind(this));
+
+  // Parse positional arguments to valid options
+  this._arguments.forEach(function (config, index) {
+    var value;
+    if (index &#x3e;= parsedOpts._.length) {
+      if (config.name in this._initOptions) {
+        value = this._initOptions[config.name];
+      } else if (&#x27;default&#x27; in config) {
+        value = config.default;
+      } else {
+        return;
+      }
+    } else if (config.type === Array) {
+      value = parsedOpts._.slice(index, parsedOpts._.length);
+    } else {
+      value = config.type(parsedOpts._[index]);
+    }
+
+    parsedOpts[config.name] = value;
+  }.bind(this));
+
+  // Make the parsed options available to the instance
+  _.extend(this.options, parsedOpts);
+  this.args = this.arguments = parsedOpts._;
+
+  // Make sure required args are all present
+  this.checkRequiredArgs();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.prompt" id="apidoc.element.generator-express.__super__.prompt">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>prompt
+        <span class="apidocSignatureSpan">(questions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prompt = function (questions) {
+  questions = promptSuggestion.prefillQuestions(this._globalConfig, questions);
+  questions = promptSuggestion.prefillQuestions(this.config, questions);
+
+  return this.env.adapter.prompt(questions).then(function (answers) {
+    if (!this.options[&#x27;skip-cache&#x27;]) {
+      promptSuggestion.storeAnswers(this._globalConfig, questions, answers, false);
+      promptSuggestion.storeAnswers(this.config, questions, answers, true);
+    }
+
+    return answers;
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.registerTransformStream" id="apidoc.element.generator-express.__super__.registerTransformStream">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>registerTransformStream
+        <span class="apidocSignatureSpan">(streams)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerTransformStream = function (streams) {
+  assert(streams, &#x27;expected to receive a transform stream as parameter&#x27;);
+  if (!_.isArray(streams)) {
+    streams = [streams];
+  }
+  this._transformStreams = this._transformStreams.concat(streams);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.rootGeneratorName" id="apidoc.element.generator-express.__super__.rootGeneratorName">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>rootGeneratorName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rootGeneratorName = function () {
+  var pkg = readPkgUp.sync({cwd: this.resolved}).pkg;
+  return pkg ? pkg.name : &#x27;*&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.rootGeneratorVersion" id="apidoc.element.generator-express.__super__.rootGeneratorVersion">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>rootGeneratorVersion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rootGeneratorVersion = function () {
+  var pkg = readPkgUp.sync({cwd: this.resolved}).pkg;
+  return pkg ? pkg.version : &#x27;0.0.0&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.run" id="apidoc.element.generator-express.__super__.run">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>run
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (cb) {
+  cb = cb || function () {};
+
+  var self = this;
+  this._running = true;
+  this.emit(&#x27;run&#x27;);
+
+  var methods = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
+  var validMethods = methods.filter(methodIsValid);
+  assert(validMethods.length, &#x27;This Generator is empty. Add at least one method for it to run.&#x27;);
+
+  this.env.runLoop.once(&#x27;end&#x27;, function () {
+    this.emit(&#x27;end&#x27;);
+    cb();
+  }.bind(this));
+
+  // Ensure a prototype method is a candidate run by default
+  function methodIsValid(name) {
+    return name.charAt(0) !== &#x27;_&#x27; &#x26;&#x26; name !== &#x27;constructor&#x27;;
+  }
+
+  function addMethod(method, methodName, queueName) {
+    queueName = queueName || &#x27;default&#x27;;
+    debug(&#x27;Queueing &#x27; + methodName + &#x27; in &#x27; + queueName);
+    self.env.runLoop.add(queueName, function (completed) {
+      debug(&#x27;Running &#x27; + methodName);
+      self.emit(&#x27;method:&#x27; + methodName);
+
+      runAsync(function () {
+        self.async = function () {
+          return this.async();
+        }.bind(this);
+
+        return method.apply(self, self.args);
+      })().then(completed).catch(function (err) {
+        debug(&#x27;An error occured while running &#x27; + methodName, err);
+
+        // Ensure we emit the error event outside the promise context so it won&#x27;t be
+        // swallowed when there&#x27;s no listeners.
+        setImmediate(function () {
+          self.emit(&#x27;error&#x27;, err);
+          cb(err);
+        });
+      });
+    });
+  }
+
+  function addInQueue(name) {
+    var item = Object.getPrototypeOf(self)[name];
+    var queueName = self.env.runLoop.queueNames.indexOf(name) === -1 ? null : name;
+
+    // Name points to a function; run it!
+    if (_.isFunction(item)) {
+      return addMethod(item, name, queueName);
+    }
+
+    // Not a queue hash; stop
+    if (!queueName) {
+      return;
+    }
+
+    // Run each queue items
+    _.each(item, function (method, methodName) {
+      if (!_.isFunction(method) || !methodIsValid(methodName)) {
+        return;
+      }
+
+      addMethod(method, methodName, queueName);
+    });
+  }
+
+  validMethods.forEach(addInQueue);
+
+  var writeFiles = function () {
+    this.env.runLoop.add(&#x27;conflicts&#x27;, this._writeFiles.bind(this), {
+      once: &#x27;write memory fs to disk&#x27;
+    });
+  }.bind(this);
+
+  this.env.sharedFs.on(&#x27;change&#x27;, writeFiles);
+  writeFiles();
+
+  // Add the default conflicts handling
+  this.env.runLoop.add(&#x27;conflicts&#x27;, function (done) {
+    this.conflicter.resolve(function (err) {
+      if (err) {
+        this.emit(&#x27;error&#x27;, err);
+      }
+
+      done();
+    }.bind(this));
+  }.bind(this));
+
+  _.invokeMap(this._composedWith, &#x27;run&#x27;);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.runInstall" id="apidoc.element.generator-express.__super__.runInstall">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>runInstall
+        <span class="apidocSignatureSpan">(installer, paths, options, cb, spawnOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runInstall = function (installer, paths, options, cb, spawnOptions) {
+  if (!cb &#x26;&#x26; _.isFunction(options)) {
+    cb = options;
+    options = {};
+  }
+
+  options = options || {};
+  spawnOptions = spawnOptions || {};
+  cb = cb || function () {};
+  paths = Array.isArray(paths) ? paths : (paths &#x26;&#x26; paths.split(&#x27; &#x27;)) || [];
+
+  var args = [&#x27;install&#x27;].concat(paths).concat(dargs(options));
+
+  // Yarn uses the `add` command to specifically add a package to a project.
+  if (installer === &#x27;yarn&#x27; &#x26;&#x26; paths.length &#x3e; 0) {
+    args[0] = &#x27;add&#x27;;
+  }
+
+  // Only for npm, use a minimum cache of one day
+  if (installer === &#x27;npm&#x27;) {
+    args = args.concat([&#x27;--cache-min&#x27;, 24 * 60 * 60]);
+  }
+
+  // Return early if we&#x27;re skipping installation.
+  if (this.options.skipInstall) {
+    cb();
+    return this;
+  }
+
+  this.env.runLoop.add(&#x27;install&#x27;, function (done) {
+    this.emit(installer + &#x27;Install&#x27;, paths);
+    this.spawnCommand(installer, args, spawnOptions)
+      .on(&#x27;error&#x27;, function (err) {
+        console.log(chalk.red(&#x27;Could not finish installation. \n&#x27;) +
+          &#x27;Please install &#x27; + installer + &#x27; with &#x27; +
+          chalk.yellow(&#x27;npm install -g &#x27; + installer) + &#x27; and try again.&#x27;
+        );
+        cb(err);
+      })
+      .on(&#x27;exit&#x27;, function (err) {
+        this.emit(installer + &#x27;Install:end&#x27;, paths);
+        cb(err);
+        done();
+      }.bind(this));
+  }.bind(this), {once: installer + &#x27; &#x27; + args.join(&#x27; &#x27;), run: false});
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.sourceRoot" id="apidoc.element.generator-express.__super__.sourceRoot">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>sourceRoot
+        <span class="apidocSignatureSpan">(rootPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sourceRoot = function (rootPath) {
+  if (_.isString(rootPath)) {
+    this._sourceRoot = path.resolve(rootPath);
+  }
+
+  return this._sourceRoot;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.spawnCommand" id="apidoc.element.generator-express.__super__.spawnCommand">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>spawnCommand
+        <span class="apidocSignatureSpan">(command, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawnCommand = function (command, args, opt) {
+  opt = opt || {};
+  return spawn(command, args, _.defaults(opt, {stdio: &#x27;inherit&#x27;}));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.spawnCommandSync" id="apidoc.element.generator-express.__super__.spawnCommandSync">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>spawnCommandSync
+        <span class="apidocSignatureSpan">(command, args, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spawnCommandSync = function (command, args, opt) {
+  opt = opt || {};
+  return spawn.sync(command, args, _.defaults(opt, {stdio: &#x27;inherit&#x27;}));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.templatePath" id="apidoc.element.generator-express.__super__.templatePath">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>templatePath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">templatePath = function () {
+  var filepath = path.join.apply(path, arguments);
+
+  if (!pathIsAbsolute(filepath)) {
+    filepath = path.join(this.sourceRoot(), filepath);
+  }
+
+  return filepath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.usage" id="apidoc.element.generator-express.__super__.usage">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>usage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">usage = function () {
+  var options = Object.keys(this._options).length ? &#x27;[options]&#x27; : &#x27;&#x27;;
+  var name = &#x27; &#x27; + this.options.namespace;
+  var args = &#x27;&#x27;;
+
+  if (this._arguments.length &#x3e; 0) {
+    args = this._arguments.map(formatArg).join(&#x27; &#x27;);
+  }
+
+  name = name.replace(/^yeoman:/, &#x27;&#x27;);
+  var out = &#x27;yo&#x27; + name + &#x27; &#x27; + options + &#x27; &#x27; + args;
+
+  if (this.description) {
+    out += &#x27;\n\n&#x27; + this.description;
+  }
+
+  return out;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.generator-express.__super__.yarnInstall" id="apidoc.element.generator-express.__super__.yarnInstall">
+        function <span class="apidocSignatureSpan">generator-express.__super__.</span>yarnInstall
+        <span class="apidocSignatureSpan">(pkgs, options, cb, spawnOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yarnInstall = function (pkgs, options, cb, spawnOptions) {
+  return this.runInstall(&#x27;yarn&#x27;, pkgs, options, cb, spawnOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
