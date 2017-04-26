@@ -1,6 +1,6 @@
 # npmdoc-generator-express
 
-#### api documentation for  [generator-express (v2.15.0)](https://github.com/petecoop/generator-express)  [![npm package](https://img.shields.io/npm/v/npmdoc-generator-express.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-express.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-express)
+#### basic api documentation for  [generator-express (v2.15.0)](https://github.com/petecoop/generator-express)  [![npm package](https://img.shields.io/npm/v/npmdoc-generator-express.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-generator-express) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-generator-express.svg)](https://travis-ci.org/npmdoc/node-npmdoc-generator-express)
 
 #### A nodejs express generator for Yeoman
 
@@ -85,7 +85,8 @@
         "test:generate:basic": "mkdir temp; cd temp && yo express --createDirectory true --dirname one --basic true --viewEngine handlebars --cssPreprocessor css --buildTool gulp && cd one && npm run test:coverage",
         "test:generate:mvc": "mkdir temp; cd temp && yo express --createDirectory true --dirname two --mvc true --viewEngine handlebars --cssPreprocessor css --database sqlite --buildTool gulp && cd two && npm run test:coverage"
     },
-    "version": "2.15.0"
+    "version": "2.15.0",
+    "bin": {}
 }
 ```
 
