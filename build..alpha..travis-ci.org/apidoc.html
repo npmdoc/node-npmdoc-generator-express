@@ -90,15 +90,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.generator-express.toString">
-            function <span class="apidocSignatureSpan">generator-express.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">generator-express.</span>__super__</span>
 
         </li>
@@ -454,7 +445,23 @@
 
   return child;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x27;use strict&#x27;;
+var path = require(&#x27;path&#x27;);
+var Generator = require(&#x27;yeoman-generator&#x27;);
+var glob = require(&#x27;glob&#x27;);
+var slugify = require(&#x27;underscore.string/slugify&#x27;);
+var mkdirp = require(&#x27;mkdirp&#x27;);
+
+module.exports = Generator.<span class="apidocCodeKeywordSpan">extend</span>({
+  constructor: function () {
+Generator.apply(this, arguments);
+
+// add option to skip install
+this.option(&#x27;skip-install&#x27;);
+
+this.slugify = slugify;
+...</pre></li>
     </ul>
 
 
@@ -468,21 +475,6 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
   EventEmitter.init.call(this);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.generator-express.toString" id="apidoc.element.generator-express.toString">
-        function <span class="apidocSignatureSpan">generator-express.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -769,7 +761,23 @@
 
   return filepath;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var name = this.options.mvc ? &#x27;mvc&#x27; : &#x27;basic&#x27;;
+var suffix = this.options.coffee ? &#x27;-coffee&#x27; : &#x27;&#x27;;
+this.filetype = this.options.coffee ? &#x27;coffee&#x27; : &#x27;js&#x27;;
+
+// shared across all generators
+this.sourceRoot(path.join(__dirname, &#x27;templates&#x27;, &#x27;shared&#x27;));
+glob.sync(&#x27;**&#x27;, { cwd: this.sourceRoot() }).map(function (file) {
+  this.fs.copyTpl(this.templatePath(file), this.<span class="apidocCodeKeywordSpan">destinationPath</span>(file.replace(/^_/, &#
+x27;&#x27;)), this);
+}, this);
+
+
+// shared for mvc/basic generators
+this.sourceRoot(path.join(__dirname, &#x27;templates&#x27;, name + &#x27;-shared&#x27;));
+this.fs.copyTpl(this.templatePath(&#x27;.&#x27;), this.destinationPath(&#x27;.&#x27;), this);
+...</pre></li>
     </ul>
 
 
@@ -798,7 +806,22 @@
 
   return this._destinationRoot || this.env.cwd;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+  },
+  writing: {
+    buildEnv: function () {
+
+// create directory
+if(this.options.createDirectory){
+  this.<span class="apidocCodeKeywordSpan">destinationRoot</span>(this.options.dirname);
+  this.appname = this.options.dirname;
+}
+
+var name = this.options.mvc ? &#x27;mvc&#x27; : &#x27;basic&#x27;;
+var suffix = this.options.coffee ? &#x27;-coffee&#x27; : &#x27;&#x27;;
+this.filetype = this.options.coffee ? &#x27;coffee&#x27; : &#x27;js&#x27;;
+...</pre></li>
     </ul>
 
 
@@ -932,7 +955,18 @@
 
   async.parallel(commands, options.callback || _.noop);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      mkdirp.sync(&#x27;public/img&#x27;);
+      if (this.options.database == &#x27;sqlite&#x27;) {
+        mkdirp.sync(&#x27;data&#x27;);
+      }
+    }
+  },
+  install: function () {
+    if (!this.options[&#x27;skip-install&#x27;]) this.<span class="apidocCodeKeywordSpan">installDependencies</span>();
+  }
+});
+...</pre></li>
     </ul>
 
 
@@ -994,7 +1028,23 @@
   this.parseOptions();
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var mkdirp = require(&#x27;mkdirp&#x27;);
+
+module.exports = Generator.extend({
+  constructor: function () {
+    Generator.apply(this, arguments);
+
+    // add option to skip install
+    this.<span class="apidocCodeKeywordSpan">option</span>(&#x27;skip-install&#x27;);
+
+    this.slugify = slugify;
+  },
+  prompting: {
+    dir: function () {
+
+if (this.options.createDirectory !== undefined) {
+...</pre></li>
     </ul>
 
 
@@ -1134,7 +1184,23 @@
     return answers;
   }.bind(this));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  var prompt = [{
+    type: &#x27;confirm&#x27;,
+    name: &#x27;createDirectory&#x27;,
+    message: &#x27;Would you like to create a new directory for your project?&#x27;
+  }];
+
+  return this.<span class="apidocCodeKeywordSpan">prompt</span>(prompt).then(function (response) {
+    this.options.createDirectory = response.createDirectory;
+  }.bind(this));
+},
+dirname: function () {
+  if (!this.options.createDirectory || this.options.dirname) {
+    return true;
+  }
+...</pre></li>
     </ul>
 
 
@@ -1373,7 +1439,23 @@
 
   return this._sourceRoot;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+var name = this.options.mvc ? &#x27;mvc&#x27; : &#x27;basic&#x27;;
+var suffix = this.options.coffee ? &#x27;-coffee&#x27; : &#x27;&#x27;;
+this.filetype = this.options.coffee ? &#x27;coffee&#x27; : &#x27;js&#x27;;
+
+// shared across all generators
+this.<span class="apidocCodeKeywordSpan">sourceRoot</span>(path.join(__dirname, &#x27;templates&#x27;, &#x27;shared&#x27;));
+glob.sync(&#x27;**&#x27;, { cwd: this.sourceRoot() }).map(function (file) {
+  this.fs.copyTpl(this.templatePath(file), this.destinationPath(file.replace(/^_/, &#x27;&#x27;)), this);
+}, this);
+
+
+// shared for mvc/basic generators
+this.sourceRoot(path.join(__dirname, &#x27;templates&#x27;, name + &#x27;-shared&#x27;));
+...</pre></li>
     </ul>
 
 
@@ -1426,7 +1508,23 @@
 
   return filepath;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var name = this.options.mvc ? &#x27;mvc&#x27; : &#x27;basic&#x27;;
+var suffix = this.options.coffee ? &#x27;-coffee&#x27; : &#x27;&#x27;;
+this.filetype = this.options.coffee ? &#x27;coffee&#x27; : &#x27;js&#x27;;
+
+// shared across all generators
+this.sourceRoot(path.join(__dirname, &#x27;templates&#x27;, &#x27;shared&#x27;));
+glob.sync(&#x27;**&#x27;, { cwd: this.sourceRoot() }).map(function (file) {
+  this.fs.copyTpl(this.<span class="apidocCodeKeywordSpan">templatePath</span>(file), this.destinationPath(file.replace(/^_/, &#
+x27;&#x27;)), this);
+}, this);
+
+
+// shared for mvc/basic generators
+this.sourceRoot(path.join(__dirname, &#x27;templates&#x27;, name + &#x27;-shared&#x27;));
+this.fs.copyTpl(this.templatePath(&#x27;.&#x27;), this.destinationPath(&#x27;.&#x27;), this);
+...</pre></li>
     </ul>
 
 
